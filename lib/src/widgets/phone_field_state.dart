@@ -100,11 +100,11 @@ class PhoneFieldState extends State<PhoneField> {
       cursor: SystemMouseCursors.click,
       child: TextButton(
         onPressed: selectCountry,
-        style: ElevatedButton.styleFrom(
+        style: TextButton.styleFrom(
           minimumSize: Size.zero,
           elevation: 0,
           padding: const EdgeInsets.all(12),
-          splashFactory: InkRipple.splashFactory,
+          backgroundColor: Colors.transparent,
         ),
 
         // material here else the click pass through empty spaces
@@ -135,7 +135,7 @@ class PhoneFieldState extends State<PhoneField> {
       disabledBorder: InputBorder.none,
       enabledBorder: InputBorder.none,
       focusedErrorBorder: InputBorder.none,
-      contentPadding: const EdgeInsets.symmetric(horizontal: 16)
+      //contentPadding: const EdgeInsets.symmetric(vertical: 10,horizontal: 16)
     );
   }
 
@@ -147,7 +147,7 @@ class PhoneFieldState extends State<PhoneField> {
       hintText: null,
       errorText: widget.errorText,
       prefix: useSuffix ? null : _getCountryCodeChip(),
-      //contentPadding: EdgeInsets.zero,
+      contentPadding: const EdgeInsets.symmetric(horizontal: 16),
       // suffix: useSuffix ? _getCountryCodeChip() : null,
     );
   }
