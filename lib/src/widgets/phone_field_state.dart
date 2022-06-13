@@ -134,7 +134,7 @@ class PhoneFieldState extends State<PhoneField> {
       disabledBorder: InputBorder.none,
       enabledBorder: InputBorder.none,
       focusedErrorBorder: InputBorder.none,
-      contentPadding: const EdgeInsets.symmetric(vertical: 10)
+      contentPadding: const EdgeInsets.symmetric(vertical: 10,horizontal: 16)
     );
   }
 
