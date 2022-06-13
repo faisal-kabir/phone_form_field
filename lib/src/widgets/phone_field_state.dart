@@ -134,7 +134,7 @@ class PhoneFieldState extends State<PhoneField> {
       disabledBorder: InputBorder.none,
       enabledBorder: InputBorder.none,
       focusedErrorBorder: InputBorder.none,
-      contentPadding: const EdgeInsets.symmetric(vertical: 10)
+      //contentPadding: const EdgeInsets.symmetric(vertical: 10)
     );
   }
 
@@ -146,7 +146,7 @@ class PhoneFieldState extends State<PhoneField> {
       hintText: null,
       errorText: widget.errorText,
       prefix: useSuffix ? null : _getCountryCodeChip(),
-      contentPadding: const EdgeInsets.symmetric(horizontal: 8)
+      //contentPadding: const EdgeInsets.symmetric(horizontal: 8)
       // suffix: useSuffix ? _getCountryCodeChip() : null,
     );
   }
