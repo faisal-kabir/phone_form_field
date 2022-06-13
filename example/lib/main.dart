@@ -274,11 +274,13 @@ class _PhoneFormFieldScreenState extends State<PhoneFormFieldScreen> {
                     ),
                     const SizedBox(height: 12),
                     ElevatedButton(
-                      onPressed: () =>
-                          controller.value = PhoneNumber.fromIsoCode(
-                        IsoCode.FR,
-                        '699999999',
-                      ),
+                      onPressed: (){
+                        controller.value = PhoneNumber.fromIsoCode(
+                          IsoCode.FR,
+                          '699999999',
+                        );
+                        //FocusScope.of(context).unfocus();
+                      },
                       child: const Text('Set +33 699 999 999'),
                     ),
                   ],
