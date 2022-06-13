@@ -98,27 +98,27 @@ class PhoneFieldState extends State<PhoneField> {
   Widget _getCountryCodeChip() {
     return MouseRegion(
       cursor: SystemMouseCursors.click,
-      child: InkWell(
-        onTap: selectCountry,
+      child: TextButton(
+        onPressed: selectCountry,
+        style: ElevatedButton.styleFrom(
+          minimumSize: Size.zero,
+          elevation: 0,
+          padding: const EdgeInsets.all(12),
+        ),
+
         // material here else the click pass through empty spaces
-        child: Material(
-          color: Colors.transparent,
-          child: Container(
-            padding: const EdgeInsets.all(12),
-            child: CountryCodeChip(
-              key: const ValueKey('country-code-chip'),
-              isoCode: controller.isoCode,
-              showFlag: widget.showFlagInInput,
-              textStyle: widget.countryCodeStyle ??
-                  widget.decoration.labelStyle ??
-                  TextStyle(
-                    fontSize: 16,
-                    color: Theme.of(context).textTheme.caption?.color,
-                  ),
-              flagSize: widget.flagSize,
-              textDirection: widget.textDirection,
-            ),
-          ),
+        child: CountryCodeChip(
+          key: const ValueKey('country-code-chip'),
+          isoCode: controller.isoCode,
+          showFlag: widget.showFlagInInput,
+          textStyle: widget.countryCodeStyle ??
+              widget.decoration.labelStyle ??
+              TextStyle(
+                fontSize: 16,
+                color: Theme.of(context).textTheme.caption?.color,
+              ),
+          flagSize: widget.flagSize,
+          textDirection: widget.textDirection,
         ),
       ),
     );
@@ -134,7 +134,7 @@ class PhoneFieldState extends State<PhoneField> {
       disabledBorder: InputBorder.none,
       enabledBorder: InputBorder.none,
       focusedErrorBorder: InputBorder.none,
-      contentPadding: const EdgeInsets.symmetric(vertical: 10,horizontal: 16)
+      //contentPadding: const EdgeInsets.symmetric(vertical: 10,horizontal: 16)
     );
   }
 
@@ -146,7 +146,7 @@ class PhoneFieldState extends State<PhoneField> {
       hintText: null,
       errorText: widget.errorText,
       prefix: useSuffix ? null : _getCountryCodeChip(),
-      contentPadding: EdgeInsets.zero,
+      //contentPadding: EdgeInsets.zero,
       // suffix: useSuffix ? _getCountryCodeChip() : null,
     );
   }
