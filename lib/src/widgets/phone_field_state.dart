@@ -146,7 +146,7 @@ class PhoneFieldState extends State<PhoneField> {
       hintText: null,
       errorText: widget.errorText,
       prefix: useSuffix ? null : _getCountryCodeChip(),
-      //contentPadding: const EdgeInsets.symmetric(horizontal: 8)
+      contentPadding: EdgeInsets.zero,
       // suffix: useSuffix ? _getCountryCodeChip() : null,
     );
   }
