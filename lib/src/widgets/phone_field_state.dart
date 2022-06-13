@@ -104,6 +104,7 @@ class PhoneFieldState extends State<PhoneField> {
           minimumSize: Size.zero,
           elevation: 0,
           padding: const EdgeInsets.all(12),
+          splashFactory: InkRipple.splashFactory,
         ),
 
         // material here else the click pass through empty spaces
