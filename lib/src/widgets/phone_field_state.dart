@@ -112,8 +112,8 @@ class PhoneFieldState extends State<PhoneField> {
         style:ButtonStyle(
           overlayColor: MaterialStateColor.resolveWith((states) => Colors.transparent),
           elevation: MaterialStateProperty.all(0),
-          maximumSize: MaterialStateProperty.all(Size.zero),
-          padding: MaterialStateProperty.all(const EdgeInsets.all(12))
+          minimumSize: MaterialStateProperty.all(Size.zero),
+          padding: MaterialStateProperty.all(const EdgeInsets.symmetric(vertical: 16))
         ),
 
         // material here else the click pass through empty spaces
